@@ -1,7 +1,7 @@
 {
-  "name": "cz-ci-cd",
+  "name": "@merz/decorators",
   "version": "0.0.0-development",
-  "description": "Commitizen, Continuos Integration and Continuos Deployment",
+  "description": "A collection of useful decorators written in TypeScript",
   "main": "dist/index.js",
   "publishConfig": {
     "access": "public"
@@ -34,7 +34,7 @@
     "template"
   ],
   "author": "Alexander Merz",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
@@ -66,12 +66,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexander-merz/cz-ci-cd.git"
+    "url": "https://https://github.com/alexander-merz/decorators.git"
   },
   "bugs": {
-    "url": "https://github.com/alexander-merz/cz-ci-cd/issues"
+    "url": "https://https://github.com/alexander-merz/decorators/issues"
   },
-  "homepage": "https://github.com/alexander-merz/cz-ci-cd#readme",
+  "homepage": "https://https://github.com/alexander-merz/decorators#readme",
   "dependencies": {
     "tslib": "^2.3.1"
   },
