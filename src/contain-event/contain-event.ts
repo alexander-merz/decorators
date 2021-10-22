@@ -5,6 +5,6 @@ export const containEvent = (target: any, propertyKey: string, descriptor: Prope
     const event = args.find(arg => arg instanceof Event) as Event
     event.preventDefault()
     event.stopPropagation()
-    fn.call(this, ...args)
+    return fn.apply(this, args)
   }
 }
