@@ -66,12 +66,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://https://github.com/alexander-merz/decorators.git"
+    "url": "https://github.com/alexander-merz/decorators.git"
   },
   "bugs": {
-    "url": "https://https://github.com/alexander-merz/decorators/issues"
+    "url": "https://github.com/alexander-merz/decorators/issues"
   },
-  "homepage": "https://https://github.com/alexander-merz/decorators#readme",
+  "homepage": "https://github.com/alexander-merz/decorators#readme",
   "dependencies": {
     "tslib": "^2.3.1"
   },
