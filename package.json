@@ -1,0 +1,81 @@
+{
+  "name": "cz-ci-cd",
+  "version": "0.0.0-development",
+  "description": "Commitizen, Continuos Integration and Continuos Deployment",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "cz": "cz",
+    "format": "prettier \"src/**/*.{js,ts}\" --ignore-path ./.eslintignore --write",
+    "lint": "eslint src/** --format table",
+    "test": "jest",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "semantic-release": "semantic-release",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "commitizen",
+    "ci",
+    "cd",
+    "template"
+  ],
+  "author": "Alexander Merz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "babel-jest": "^27.0.6",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^8.0.1",
+    "husky": "^7.0.0",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.56.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "semantic-release": "^18.0.0",
+    "typescript": "^4.3.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexander-merz/cz-ci-cd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexander-merz/cz-ci-cd/issues"
+  },
+  "homepage": "https://github.com/alexander-merz/cz-ci-cd#readme",
+  "dependencies": {
+    "tslib": "^2.3.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  }
+}
