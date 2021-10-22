@@ -5,6 +5,7 @@
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
+    "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
