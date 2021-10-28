@@ -17,13 +17,11 @@ describe('containEvent', () => {
     })
     const containEventTester = new ContainEventTester()
     jest.spyOn(event, 'stopPropagation')
-    jest.spyOn(event, 'preventDefault')
 
     // act
     const returnValue = containEventTester.testContainEvent(event)
 
     // assert
-    expect(event.preventDefault).toHaveBeenCalled()
     expect(event.stopPropagation).toHaveBeenCalled()
     expect(event.defaultPrevented).toBeTruthy()
     expect(returnValue).toBeTruthy()

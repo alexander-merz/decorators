@@ -1,4 +1,9 @@
-export const containEvent = (target: any, propertyKey: string, descriptor: PropertyDescriptor) => {
+/** Prevents default event behavior and stops propagation. */
+export const containEvent: MethodDecorator = (
+  target: Object,
+  propertyKey: string | symbol,
+  descriptor: PropertyDescriptor
+) => {
   const fn = descriptor.value as Function
 
   descriptor.value = function (...args: any[]) {
